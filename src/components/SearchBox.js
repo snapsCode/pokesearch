@@ -1,15 +1,16 @@
 import React from "react";
 
-const SearchBox = ({handleSubmit, searchChange }) => {
+const SearchBox = ({ handleChange }) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
       <input
         className="p-2 m-2"
-        type="search"
+        type="text"
         placeholder="search..."
-        onChange={searchChange}
+        onChange={handleChange}
       ></input>
-    </form>
+      {/* <button onClick={handleSubmit}>search!</button> */}
+    </div>
   );
 };
 
