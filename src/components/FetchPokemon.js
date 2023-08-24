@@ -1,8 +1,8 @@
-const url = "https://pokeapi.co/api/v2/pokemon?limit=151";
-
-export const getData = async () => {
+export const getData = async (number, offset) => {
   try {
-    const resp = await fetch(url);
+    const resp = await fetch(
+      `https://pokeapi.co/api/v2/pokemon?limit=${number}&offset=${offset}`
+    );
     const data = await resp.json();
     const results = await data.results;
 
@@ -11,7 +11,7 @@ export const getData = async () => {
     const urlResps = await Promise.all(urls.map((u) => fetch(u)));
     const urlData = await Promise.all(urlResps.map((resps) => resps.json()));
     // console.log("newdata", newData);
-    // const finalData = Promise.all(urls.map((u) => fetch(u))).then((resps) =>
+    // const urlData = Promise.all(urls.map((u) => fetch(u))).then((resps) =>
     //   Promise.all(resps.map((res) => res.json()))
     // );
     return await urlData;
@@ -19,3 +19,7 @@ export const getData = async () => {
     console.log("oops", error);
   }
 };
+
+export const somefunc = () => {
+  
+}

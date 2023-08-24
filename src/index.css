@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: pokeFont1;
+  src: url('./containers/PocketMonk-15ze.ttf');
+}
+
+@font-face {
+  font-family: pokeFont2;
+  src: url('./containers/PokemonGb-RAeo.ttf');
+}
+
+h1{
+  font-family: 'pokeFont1', sans-serif;
+}
+
+h2{
+  font-family: 'pokeFont2', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,8 +35,9 @@ code {
 }
 
 #footer {
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
-  height: 2.5rem; /* Footer height */
+  /* height: 2.5rem; Footer height */
   text-align: center;
 }

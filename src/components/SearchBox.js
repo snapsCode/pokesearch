@@ -2,9 +2,9 @@ import React from "react";
 
 const SearchBox = ({ handleChange }) => {
   return (
-    <div>
+    <div className="">
       <input
-        className="p-2 m-2"
+        className="p-2 m-2 rounded-lg"
         type="text"
         placeholder="search..."
         onChange={handleChange}
