@@ -1,0 +1,39 @@
+$main-color: #801515;
+$main-color-2:  #550000;
+$background-color: #D46A6A;
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+    border-radius: 15px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border-radius: 15px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $main-color-2;
+  }
+
+  @media screen and (min-width: 1024px) {
+        .scroll{
+        min-height: 100%;
+        width: auto;
+    }
+  }
+
+//   @media screen and (min-width: ){
+    
+//   }
+  
+
+  

@@ -1,24 +1,27 @@
 import React, { Component } from "react";
-import "./App.css";
-import SearchBox from "../components/SearchBox";
+import "./App.scss";
 import CardList from "../components/CardList";
 import ErrorBoundary from "../components/ErrorBoundary";
-import { getData } from "../components/fetchPokemon";
+import * as fetchPokemon from "../components/fetchPokemon";
+import LoadingScreen from "../components/LoadingScreen";
+import NavBar from "../components/NavBar";
+import ButtonList from "../components/ButtonList";
+// import Scroll from "../components/Scroll";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = { pokemon: [], searchField: "", filteredList: [] };
+    this.state = {
+      pokemon: [],
+      searchField: "",
+      filteredList: [],
+      currentGen: 1,
+    };
   }
 
-  async componentDidMount() {
-    try {
-      const data = await getData(151, 0);
-      this.setState({ pokemon: data });
-    } catch (e) {
-      console.log("oops", e);
-    }
-  }
+  componentDidMount = async () => {
+    this.handleGen(1);
+  };
 
   filter = () => {
     const { pokemon, searchField } = this.state;
@@ -28,38 +31,52 @@ class App extends Component {
     return filteredList;
   };
 
+  handleGen = async (gen = 1) => {
+    this.setState({ pokemon: [] });
+    const data = await fetchPokemon.getGen(gen);
+    this.setState({ pokemon: data, currentGen: gen });
+  };
+
   handleChange = async (e) => {
     this.setState({ searchField: e.target.value });
   };
-  handleSubmit = (e) => {
-    this.setState({ submittion: this.state.searchField });
-  };
+  // handleSubmit = (e) => {
+  //   this.setState({ submittion: this.state.searchField });
+  // };
   render() {
     const { pokemon } = this.state;
-    // this.filter();
-
-    // const filteredList = this.filter();
-    // console.log('filteredlist', filteredList);
     return (
       <div className="App">
         <ErrorBoundary>
-          <nav className="flex justify-end space-x-4 bg-slate-600 mb-4">
-          <h1>Pokedex Search!</h1>
-            <SearchBox
-              handleSubmit={this.handleSubmit}
-              handleChange={this.handleChange}
-            />
-          </nav>
+          <NavBar handleChange={this.handleChange} />
           {!pokemon.length ? (
-            <div className=" h-screen">
-              <img
-                className="m-auto h-3/5"
-                alt="loading..."
-                src="https://art.ngfiles.com/images/1749000/1749749_coochiem8_made-a-little-pokeball-loop.gif?f1618388656"
-              ></img>
-            </div>
+            <LoadingScreen />
           ) : (
-            <CardList list={this.filter()} />
+            <div className="">
+              <ButtonList
+                handleGen1={() => this.handleGen(1)}
+                disableGen1={this.state.currentGen === 1}
+                handleGen2={() => this.handleGen(2)}
+                disableGen2={this.state.currentGen === 2}
+                handleGen3={() => this.handleGen(3)}
+                disableGen3={this.state.currentGen === 3}
+                handleGen4={() => this.handleGen(4)}
+                disableGen4={this.state.currentGen === 4}
+                handleGen5={() => this.handleGen(5)}
+                disableGen5={this.state.currentGen === 5}
+                handleGen6={() => this.handleGen(6)}
+                disableGen6={this.state.currentGen === 6}
+                handleGen7={() => this.handleGen(7)}
+                disableGen7={this.state.currentGen === 7}
+                handleGen8={() => this.handleGen(8)}
+                disableGen8={this.state.currentGen === 8}
+                handleGen9={() => this.handleGen(9)}
+                disableGen9={this.state.currentGen === 9}
+              />
+              {/* <Scroll> */}
+              <CardList list={this.filter()} />
+              {/* </Scroll> */}
+            </div>
           )}
         </ErrorBoundary>
       </div>
