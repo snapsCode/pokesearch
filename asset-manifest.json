@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.530ee547.css",
-    "main.js": "/static/js/main.3b456a6b.js",
-    "static/js/787.ab378faf.chunk.js": "/static/js/787.ab378faf.chunk.js",
-    "static/media/coochiem8_pokeball-loop (2).gif": "/static/media/coochiem8_pokeball-loop (2).7ee0b0254da858f151d0.gif",
-    "static/media/PocketMonk-15ze.ttf": "/static/media/PocketMonk-15ze.09d09837f1b6dec50403.ttf",
-    "static/media/PokemonGb-RAeo.ttf": "/static/media/PokemonGb-RAeo.6211ee48ea626f34681e.ttf",
-    "index.html": "/index.html",
-    "main.530ee547.css.map": "/static/css/main.530ee547.css.map",
-    "main.3b456a6b.js.map": "/static/js/main.3b456a6b.js.map",
-    "787.ab378faf.chunk.js.map": "/static/js/787.ab378faf.chunk.js.map"
+    "main.css": "/pokesearch/static/css/main.487d5d85.css",
+    "main.js": "/pokesearch/static/js/main.3cc8f9e6.js",
+    "static/js/787.ab378faf.chunk.js": "/pokesearch/static/js/787.ab378faf.chunk.js",
+    "static/media/coochiem8_pokeball-loop (2).gif": "/pokesearch/static/media/coochiem8_pokeball-loop (2).7ee0b0254da858f151d0.gif",
+    "static/media/PocketMonk-15ze.ttf": "/pokesearch/static/media/PocketMonk-15ze.09d09837f1b6dec50403.ttf",
+    "static/media/PokemonGb-RAeo.ttf": "/pokesearch/static/media/PokemonGb-RAeo.6211ee48ea626f34681e.ttf",
+    "index.html": "/pokesearch/index.html",
+    "main.487d5d85.css.map": "/pokesearch/static/css/main.487d5d85.css.map",
+    "main.3cc8f9e6.js.map": "/pokesearch/static/js/main.3cc8f9e6.js.map",
+    "787.ab378faf.chunk.js.map": "/pokesearch/static/js/787.ab378faf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.530ee547.css",
-    "static/js/main.3b456a6b.js"
+    "static/css/main.487d5d85.css",
+    "static/js/main.3cc8f9e6.js"
   ]
 }
