@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.scss";
 import CardList from "../components/CardList";
 import ErrorBoundary from "../components/ErrorBoundary";
-import * as fetchPokemon from "../components/fetchPokemon";
+import * as fetchPokemon from "../components/FetchPokemon";
 import LoadingScreen from "../components/LoadingScreen";
 import NavBar from "../components/NavBar";
 import ButtonList from "../components/ButtonList";
