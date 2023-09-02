@@ -1,7 +1,7 @@
 {
   "name": "pokemon",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "https://snapscode.github.io/pokesearch/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
